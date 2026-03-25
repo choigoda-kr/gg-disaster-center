@@ -2,29 +2,21 @@
 본 프로젝트는 구글 시트 기반의 저수지 수위 및 방류량 데이터를 실시간으로 시각화하여 GitHub Pages를 통해 배포하는 시스템입니다.
 
 🚀 주요 기능
-실시간 데이터 연동: 구글 스프레드시트의 수위/방류량 데이터 즉시 반영
-
-다크 모드 최적화: 상황실 모니터링 환경에 최적화된 UI 제공
-
-웹 앱 임베딩: Google Apps Script(GAS)를 활용한 독립적 실행 환경
+  실시간 데이터 연동: 구글 스프레드시트의 수위/방류량 데이터 즉시 반영
+  다크 모드 최적화: 상황실 모니터링 환경에 최적화된 UI 제공
+  웹 앱 임베딩: Google Apps Script(GAS)를 활용한 독립적 실행 환경
 
 ⚠️ [필수] 업데이트 및 유지보수 가이드 (중요)
+
 🔴 구글 앱스 스크립트 수정 시 주의사항
-스크립트 코드를 수정한 후에는 단순히 저장만 해서는 반영되지 않습니다. 반드시 아래 절차를 준수하십시오.
-
-새 배포 실행: 배포 -> 새 배포를 통해 새로운 버전 번호를 부여하고 배포를 완료합니다.
-
-URL 갱신 확인: 새 배포 시 생성된 **웹 앱 URL(끝이 /exec로 끝나는 주소)**을 복사합니다.
-
-index.html 수정: * index.html 파일 내의 <iframe> 태그 src 속성값을 새로 복사한 URL로 반드시 교체해야 합니다.
-
-주소를 수정하지 않을 경우, 이전 버전의 대시보드가 출력되거나 화면이 표시되지 않을 수 있습니다.
-
-GitHub Push: 수정된 index.html을 GitHub 저장소에 Push 하여 최종 반영합니다.
+  스크립트 코드를 수정한 후에는 단순히 저장만 해서는 반영되지 않습니다. 반드시 아래 절차를 준수하십시오.
+  1. 새 배포 실행: 배포 -> 새 배포를 통해 새로운 버전 번호를 부여하고 배포를 완료합니다.
+  2. URL 갱신 확인: 새 배포 시 생성된 **웹 앱 URL(끝이 /exec로 끝나는 주소)**을 복사합니다.
+  3. index.html 수정: * index.html 파일 내의 <iframe> 태그 src 속성값을 새로 복사한 URL로 반드시 교체해야 합니다.
+   * 주소를 수정하지 않을 경우, 이전 버전의 대시보드가 출력되거나 화면이 표시되지 않을 수 있습니다.
+  4. GitHub Push: 수정된 index.html을 GitHub 저장소에 Push 하여 최종 반영합니다.
 
 🛠️ 기술 스택 및 구성
-Frontend: HTML5, CSS3 (GitHub Pages 배포)
-
-Backend: Google Apps Script (GAS)
-
-Database: Google Spreadsheets
+  Frontend: HTML5, CSS3 (GitHub Pages 배포)
+  Backend: Google Apps Script (GAS)
+  Database: Google Spreadsheets
